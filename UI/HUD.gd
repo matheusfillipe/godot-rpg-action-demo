@@ -28,9 +28,9 @@ func win():
 	$Retry.visible = true
 	dead = true
 
-	var now = OS.get_time();
+	var now = OS.get_unix_time()
 	var start = stats.start_time
-	$Retry/Label.text = str(start.hour - now.hour) + " Hours " + str(start.minute - now.minute) + " minutes and " + str(start.second - now.second) + " seconds"
+	$Retry/Label.text = str(int((now-start)/60)) + " Minutes and " + str(int((now-start)%60)) + " seconds \n" + str(stats.kills) + " bats killed"
 
 
 func toggle_pause():

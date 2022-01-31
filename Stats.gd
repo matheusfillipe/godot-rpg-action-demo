@@ -4,8 +4,10 @@ export(int) var max_health = 1 setget set_max_health
 
 var health = max_health setget set_health
 var grasses = 0 setget set_grass_count
+var kills = 0
 onready var initial_max_health = max_health
-onready var start_time = OS.get_time()
+onready var start_time = OS.get_unix_time()
+
 
 signal no_health
 signal health_changed
@@ -20,7 +22,7 @@ func reset_player():
 	self.health = initial_max_health
 	self.max_health = initial_max_health
 	self.grasses = 0
-	start_time = OS.get_time()
+	start_time = OS.get_unix_time()
 
 func set_grass_count(value):
 	grasses = value

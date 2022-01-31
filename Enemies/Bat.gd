@@ -87,6 +87,7 @@ func _on_HurtBox_area_entered(area):
 
 
 func _on_Stats_no_health():
+	PlayerStats.kills += 1
 	queue_free()
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
