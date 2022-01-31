@@ -2004,6 +2004,7 @@ position = Vector2( 200, -224 )
 
 [node name="AnimatedSprite" parent="YSort/Enemies/Bat9" index="0"]
 material = SubResource( 53 )
+frame = 0
 
 [node name="Stats" parent="YSort/Enemies/Bat9" index="5"]
 max_health = 4
@@ -2019,6 +2020,7 @@ position = Vector2( -152, -232 )
 
 [node name="AnimatedSprite" parent="YSort/Enemies/Bat74" index="0"]
 material = SubResource( 54 )
+frame = 0
 
 [node name="Stats" parent="YSort/Enemies/Bat74" index="5"]
 max_health = 4
