@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/GrassCounter.gd" type="Script" id=1]
+[ext_resource path="res://World/Grass.png" type="Texture" id=2]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0, 0, 0, 0.231373, 0, 0, 0, 0.0862745 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 64
+
+[node name="GrassCounter" type="Control"]
+margin_right = 40.0
+margin_bottom = 32.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+visible = false
+margin_top = 8.0
+margin_right = 96.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 16 )
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 56.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 24, 16 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_left = 28.0
+margin_top = 9.0
+margin_right = 36.0
+margin_bottom = 23.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": true
+}
