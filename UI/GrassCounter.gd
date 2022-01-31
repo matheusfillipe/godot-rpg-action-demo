@@ -14,4 +14,5 @@ func update_count():
 	$HBoxContainer/Label.text = str(PlayerStats.grasses)
 
 func _ready():
+# warning-ignore:return_value_discarded
 	PlayerStats.connect("grass_count_changed", self, "update_count")

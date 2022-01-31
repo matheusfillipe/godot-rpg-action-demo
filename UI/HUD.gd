@@ -14,6 +14,7 @@ func _process(_delta):
 		$AnimationPlayer.play("menu_action")
 		stats.reset_player()
 		get_tree().paused = false
+# warning-ignore:return_value_discarded
 		get_tree().reload_current_scene()
 
 func die():
