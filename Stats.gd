@@ -22,6 +22,7 @@ func reset_player():
 	self.health = initial_max_health
 	self.max_health = initial_max_health
 	self.grasses = 0
+	self.kills = 0
 	start_time = OS.get_unix_time()
 
 func set_grass_count(value):
